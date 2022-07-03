@@ -3,7 +3,7 @@ import React from 'react'
 export default function Categories() {
   return (
     <div className='containerCategories'>
-      <h1 style={{textAlign:"center", margin:"30px"}}>Categories</h1>
+      <h1  className = "headingCategories" style={{textAlign:"center", margin:"30px"}}>CATEGORIES</h1>
       <div>
         <div className ="container">
         <div className='row' >
