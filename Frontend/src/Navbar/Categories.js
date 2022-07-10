@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 export default function Categories() {
   return (
@@ -7,6 +8,7 @@ export default function Categories() {
       <div>
         <div className ="container">
         <div className='row' >
+          <Link to="/javascript">
         <div className="card col card1" style={{width: "18rem", margin :"30px", backgroundColor:"red"}}>
   <img style={{borderRadius:"50%", width : "250px", height:"200px", margin:"auto", marginTop:"20px"}} src="http://code-institute-org.github.io/Full-Stack-Web-Developer-Stream-0/assets/javascript.png" className="card-img-top" alt="..."/>
   <div className="card-body">
@@ -15,6 +17,7 @@ export default function Categories() {
     <button style={{backgroundColor:"whitesmoke", color:"black"}}className='btn btn-success'>Start Quiz</button>
   </div>
 </div>
+</Link>
         <div className="card col card2" style={{width: "18rem", margin :"30px", backgroundColor:"red"}}>
         <img style={{borderRadius:"50%", width : "200px", height:"200px", margin:"auto", marginTop:"20px"}} src="https://cdn-icons-png.flaticon.com/512/732/732212.png?w=360" className="card-img-top" alt="..."/>
   <div className="card-body">

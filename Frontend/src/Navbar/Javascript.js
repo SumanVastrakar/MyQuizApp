@@ -10,16 +10,19 @@ export default function Javascript() {
             setData(data);
         })
     }
+    console.log(JSON.parse("{foo : hello}"));
 
-    console.log(data)
+    // const originalData = JSON.parse(data[0]);
+    // console.log(originalData)
+
+    // console.log(data)
   return (
     <div>
-        {
-            data.map((e) => (
-                <h1>{e.ques}</h1>
-            ))
-        }
-      
+    {/* {
+        data.map((e) => (
+            <h1 style={{margin:"50px"}}>{e}</h1>
+        ))
+    } */}
     </div>
   )
 }
