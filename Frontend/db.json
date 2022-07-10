@@ -1,0 +1,99 @@
+{
+  "quiz": [
+    {
+      "id": 1,
+      "category": "javascript",
+      "ques": "Javascript is an _______language",
+      "a":"Object-Oriented",
+      "b": "Object-Based",
+      "c" : "Procedural",
+      "d" : "None of the Above",
+      "answer" : "a",
+      "details":"Javascript is an Object-Oriented Language",
+      "points":,
+    },
+    {
+      "id": 2 ,
+      "category" : "javascript",
+      "ques" : "Which of the following methods is used to access HTML elements using Javascript?",
+      "a" : "getElementbyId()",
+      "b" : "getElementByClassName()",
+      "c" : "Both A and B" ,
+      "d" : "None of theAbove",
+      "answer" : "c",
+      "details" : "Both the above methods are used to access HTML elements using Javascript"   
+    },
+    {
+      "id": 3 ,
+      "category" : "javascript" ,
+      "ques" : "When the switch statement matches the expression with the given labels, how is the comparison done?",
+      "a" : "Both the datatype and the result of the expression are compared",
+      "b" : "only the datatype of the expression is  compared",
+      "c" : "only the value of the expression is compared",
+      "d" : "None of the Above",
+      "answer" : "a",
+      "details" :"Switch performs an ‘===’ based comparison, i.e both the value of the expression and its datatype is compared." 
+
+    }
+    {
+      "id": 4 ,
+      "category" :"javascript" ,
+      "ques" :"What is the use of the <noscript> tag in Javascript?" ,
+      "a" : "The contents are displayed by non-JS-based browsers",
+      "b" : "Clears aa the cookies and cache",
+      "c" : "Both A and B",
+      "d" : "None of the Above",
+      "answer" : "a",
+      "details" : "The <noscript> tag is displayed by non-Javascript browsers only."
+
+    }
+    {
+      "id": 5,
+      "category" :"javascript" ,
+      "ques" : "When an operator’s value is NULL, the typeof returned by the unary operator is:" ,
+      "a" : "Boolean",
+      "b" : "Undefined",
+      "c" : "Object",
+      "d" : "Integer",
+      "answer" :"c" ,
+      "details" : "Any NULL value of operator will always return typeof object."
+
+    },
+    {
+      "id": 6 ,
+      "category" : "javascript",
+      "ques" :"What does the Javascript “debugger” statement do?" ,
+      "a" :"It will debug all the errors in the program at runtime",
+      "b" : "It acts a breakpoint in a program",
+      "c" : "It will debug error in the current statement if any",
+      "d" : "All of the above" ,
+      "answer" : "b",
+      "details" : "‘debugger’ statement is used to setup the breakup points at probable points of error in the code snippet, using the debugger window."
+
+    },
+    {
+      "id":  ,
+      "category" : ,
+      "ques" : ,
+      "a" : ,
+      "b" : ,
+      "c" : ,
+      "d" : ,
+      "answer" : ,
+      "details" : 
+
+    },
+    {
+      "id":  ,
+      "category" : ,
+      "ques" : ,
+      "a" : ,
+      "b" : ,
+      "c" : ,
+      "d" : ,
+      "answer" : ,
+      "details" : 
+
+    }
+  ]
+}

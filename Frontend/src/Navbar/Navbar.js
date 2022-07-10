@@ -2,6 +2,7 @@ import React from 'react'
 import Categories from './Categories'
 import SlideShowImg from './SlideShowImg'
 import { FaUserCircle, FaUserEdit } from "react-icons/fa";
+import {Link} from "react-router-dom"
 
 export default function Navbar() {
 
@@ -31,14 +32,18 @@ export default function Navbar() {
      />
      <p style={{textAlign:"center"}} >User Login</p>
         </div>
+        <Link style={{textDecoration : "none"}} to="/adminlogin">
+        
         <div style={{ textAlign: "center", margin : "auto", marginRight: "40px", marginTop:"10px"}}>
-  <FaUserEdit style={{fontSize:"50px"}}
+  <FaUserEdit style={{fontSize:"50px", color : "white"}}
       data-bs-toggle="tooltip" data-bs-placement="top"
       data-bs-custom-class="custom-tooltip"
       title="Login As Admin"
+
      />
      <p style={{textAlign:"center"}}>Admin Login</p>
      </div>
+        </Link>
   </div>
      
 
@@ -48,12 +53,6 @@ export default function Navbar() {
 
 {/* background images */}
 
-<div>
- <SlideShowImg/>
-</div>
-<div>
-    <Categories/>
-</div>
     </div>
   )
 }
