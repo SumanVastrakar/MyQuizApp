@@ -1,9 +1,17 @@
 {
   "quiz": [
-  
+   
     {
-      "{\"category\":\"HTML\",\"ques\":\"var a ": " Math.max() < Math.min(); var b = Math.max() > Math.min(); print(a); print(b);\",\"a\":\"efewg\",\"b\":\"sdfd\",\"c\":\"fdsf\",\"d\":\"fsddsf\",\"answer\":\"fffffffffdgggggggggggggggggggggggggggggggggggdrrrrrr\",\"details\":\"rerrrrrrrrrrrrrrrrrrrrr\",\"points\":\"12\"}",
-      "id": 3
+      "category": "ReactJs",
+      "ques": "var a = Math.max() < Math.min(); var b = Math.max() > Math.min(); print(a); print(b);",
+      "a": "true false",
+      "b": "adfjs",
+      "c": "uhsudu",
+      "d": "fhudhu",
+      "answer": "A",
+      "details": "ufgfgfgfgfgfgfgfgfgfgfgfgfgfguyrtybnv",
+      "points": "20",
+      "id": 1
     }
   ]
 }

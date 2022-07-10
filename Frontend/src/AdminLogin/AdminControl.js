@@ -24,8 +24,8 @@ points : "",
     console.log(form)
 
     const handleSubmit = () => {
-    const myJson = JSON.stringify(form);
-    dispatch(postQuestion(myJson))
+    // const myJson = JSON.stringify(form);
+    dispatch(postQuestion(form))
     }
  
   return (
