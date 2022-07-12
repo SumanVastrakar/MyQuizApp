@@ -14,7 +14,7 @@
     },
     {
       "category": "javascript",
-      "ques": "function sayHi() {   console.log(name);   console.log(age);   var name = 'Lydia';   let age = 21; }  sayHi();",
+      "ques": "function sayHi() {console.log(name); console.log(age);var name = 'Lydia';let age = 21; }sayHi();",
       "a": "Lydia and undefined",
       "b": "Lydia and ReferenceError",
       "c": "ReferenceError and 21",
@@ -26,7 +26,7 @@
     },
     {
       "category": "javascript",
-      "ques": "for (var i = 0; i < 3; i++) {   setTimeout(() => console.log(i), 1); }  for (let i = 0; i < 3; i++) {   setTimeout(() => console.log(i), 1); }",
+      "ques": "for(var i = 0;i<3;i++){setTimeout(() => console.log(i), 1);}for (let i = 0; i < 3; i++) {setTimeout(()=> console.log(i),1);}",
       "a": "0 1 2 and 0 1 2",
       "b": "0 1 2 and 3 3 3",
       "c": "3 3 3 and 0 1 2",

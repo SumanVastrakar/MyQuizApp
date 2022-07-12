@@ -1,64 +1,72 @@
 import React,{useState} from 'react'
+import {useSelector, useDispatch} from "react-redux";
+import { colorA,colorB, colorC, colorD, countNumber, flag } from '../../Redux/JavascriptPage/action';
 
-export default function Answers({questions, currentIndex, ans}) {
+export default function Answers({questions, currentIndex, ans, details}) {
+    const dispatch = useDispatch()
     const letter = ["A", "B", "C", "D"];
-    const [colorA, setColorA] = useState("answer-letter")
-    const [colorB, setColorB] =  useState("answer-letter")
-    const [colorC, setColorC] = useState("answer-letter")
-    const [colorD, setColorD] = useState("answer-letter")
-    const [flag, setFlag] = useState("");
+    const A = useSelector(store => store.jsCurrentques.colorA);
+    const B = useSelector(store => store.jsCurrentques.colorB);
+    const C = useSelector(store => store.jsCurrentques.colorC);
+    const D = useSelector(store => store.jsCurrentques.colorD);
+    const F = useSelector(store => store.jsCurrentques.flag);
+    const correctAnswerCount = useSelector(store => store.jsCurrentques.correctAnswerCount)
+
+
   return (
     <>
-    <div className={`answer ${flag}`}  disabled ={flag} onClick={() =>{
+    <div className={`answer ${F}`}  onClick={() =>{
      if( ans === "A"){
-     
-        setColorA("correct-answer")
+         dispatch(colorA("correct-answer"))
+         dispatch(countNumber(1))
+       
      }else {
-        setColorA("wrong-answer")
+        dispatch(colorA("wrong-answer"))
      }
-     setFlag("disabled-answer")
+     dispatch(flag('disabled-answer'))
+ 
 
 }}>
-        <div className={colorA} >{letter[0]}</div>
+        <div className={A} >{letter[0]}</div>
     <div className='answer-text'>{questions[currentIndex]?.a}</div>
     </div>
-    <div className={`answer ${flag}`}   onClick={() =>{
+    <div className={`answer ${F}`}   onClick={() =>{
      if( ans === "B"){
-     
-        setColorB("correct-answer")
+        dispatch(countNumber(1))
+        dispatch(colorB("correct-answer"))
      }else {
-        setColorB("wrong-answer")
+        dispatch(colorB("wrong-answer"))
      }
-     setFlag("disabled-answer")
+     dispatch(flag('disabled-answer'))
 
 }}>
-    <div className={colorB}>{letter[1]}</div>
+    <div className={B}>{letter[1]}</div>
     <div className='answer-text'>{questions[currentIndex]?.b}</div>
     </div>
-    <div className={`answer ${flag}`}   onClick={() =>{
+    <div className={`answer ${F}`}   onClick={() =>{
      if( ans === "C"){
-     
-        setColorC("correct-answer")
+        dispatch(countNumber(1))
+        dispatch(colorC("correct-answer"))
      }else {
-        setColorC("wrong-answer")
+        dispatch(colorC("wrong-answer"))
      }
-     setFlag("disabled-answer")
+     dispatch(flag('disabled-answer'))
 
 }}>
-    <div className={colorC}>{letter[2]}</div>  
+    <div className={C}>{letter[2]}</div>  
     <div className='answer-text'>{questions[currentIndex]?.c}</div>
     </div>
-    <div className={`answer ${flag}`}   onClick={() =>{
+    <div className={`answer ${F}`}   onClick={() =>{
      if( ans === "D"){
-     
-        setColorD("correct-answer")
+        dispatch(countNumber(1))
+        dispatch(colorD("correct-answer"))
      }else {
-        setColorD("wrong-answer")
+        dispatch(colorD("wrong-answer"))
      }
-     setFlag("disabled-answer")
+     dispatch(flag('disabled-answer'))
 
 }}>
-    <div className={colorD}>{letter[3]}</div>
+    <div className={D}>{letter[3]}</div>
     <div className='answer-text'>{questions[currentIndex]?.d}</div>
     </div>
     </>
