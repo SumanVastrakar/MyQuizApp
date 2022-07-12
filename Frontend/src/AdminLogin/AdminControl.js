@@ -26,6 +26,18 @@ points : "",
     const handleSubmit = () => {
     // const myJson = JSON.stringify(form);
     dispatch(postQuestion(form))
+    alert("question added successfully")
+    setForm({
+      category : "",
+ques : "",
+a : "",
+b : "",
+c : "",
+d : "",
+answer : "",
+details : "",
+points : "",  
+    })
     }
  
   return (
@@ -82,7 +94,7 @@ points : "",
 </div>
       <div class="input-group flex-nowrap mb-3" mb="20px" style={{width : "50%", margin :"auto"}}>
   <span class="input-group-text" id="addon-wrapping">Points</span>
-  <input type="text" class="form-control" placeholder="Allot points to this question" onChange={handleChange} aria-label="question" aria-describedby="addon-wrapping" name="points"/>
+  <input type="number" class="form-control" placeholder="Allot points to this question" onChange={handleChange} aria-label="question" aria-describedby="addon-wrapping" name="points"/>
 
 </div>
 <div class="input-group flex-nowrap mb-3" mb="20px" style={{width : "50%", margin :"auto"}}>
