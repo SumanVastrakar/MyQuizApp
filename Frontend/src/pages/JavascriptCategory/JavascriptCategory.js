@@ -1,7 +1,9 @@
 import React from 'react'
 import {useState, useEffect} from "react"
 import { useSelector, useDispatch } from 'react-redux';
-import { arrayLength, quesNum } from '../../Redux/JavascriptPage/action';
+import { arrayLength, quesNum, restart, shuffleAnswer } from '../../Redux/JavascriptPage/action';
+import Answers from './Answers';
+
 
 export default function JavascriptCategory() {
     const[data, setData] = useState([]);
@@ -20,14 +22,22 @@ export default function JavascriptCategory() {
             setData(data);
         })
     }
-const jsArray = [];
+
 // if( data.length !)
+let questions = [];
 for( let i = 0; i < data.length; i++){
     if( data[i].category === "javascript"){
-        jsArray.push(data[i])
+        questions.push(data[i])
     }
 }
-console.log(jsArray)
+
+let ans = questions[currentIndex]?.answer;
+console.log(ans)
+
+console.log(questions)
+// useEffect(() => {
+// dispatch(shuffleAnswer(questions))
+//   },[data])
 
   return (
     <div className="quiz">
@@ -37,27 +47,34 @@ console.log(jsArray)
         <div className='results-info'>
           <div>You have completed Javascript Quiz.</div>
           <div>
-            You've got {correctAnswerCount} of {data.length}
+            You've got {correctAnswerCount} of {" "} {questions.length}
           </div>
+          <div className='next-button' onClick={() => dispatch(restart())}>Restart</div>
         </div>
           </div>
       )}
       {!showResults && (
         <div>
     <div className='score'>
-      Question {currentIndex + 1}/{data.length}
+      Question {currentIndex + 1}/{questions.length}
       </div>
    <div className="question">
-   {jsArray[currentIndex]?.ques}
+   {questions[currentIndex]?.ques}
    </div>
+   <div className='answers'>
+    <Answers questions={questions} currentIndex={currentIndex} ans = {ans}/>
+
+
+    </div>
    <div className='next-button' onClick={(() => {
     dispatch(quesNum(1)) 
-    dispatch(arrayLength(data.length))
+    dispatch(arrayLength(questions.length))
    })}> Next Question </div>
         </div>
       )}
   
-
+{/* <ShuffleAnswer/> */}
     </div>
   )
 }
+export const questions = [];

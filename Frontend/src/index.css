@@ -185,15 +185,31 @@ div {
 }
 
 .correct-answer {
-  border: 2px solid #1ea55b;
+  font-size: 30px;
+  background-color:#1ea55b;
+  color: #fff;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #1ea55b ;
 }
 
 .correct-answer .answer-letter {
   background: #1ea55b;
+  border: 2px solid #1ea55b ;
 }
 
 .wrong-answer {
   border: 2px solid #dc0a0a;
+  font-size: 30px;
+  background-color: #dc0a0a;
+  color: #fff;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .wrong-answer .answer-letter {
@@ -229,4 +245,5 @@ div {
 
 .disabled-answer {
   pointer-events: none;
+  background-color: rgb(200, 205, 205);
 }
