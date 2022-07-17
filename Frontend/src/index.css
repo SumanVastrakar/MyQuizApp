@@ -60,10 +60,26 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 
 background-size: cover;
 box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
+card :before{
+  position: absolute;
+  top: 0;
+  left: 0;
+    box-shadow: 0 6px 12px 12px rgba($c_0, 0.4); 
+ will-change: opacity;
+  transform-origin: top center; 
+   transform: skewX(.001deg);
+  transition: transform .35s ease-in-out, opacity .5s ease-in-out;
+}
 .card:hover{
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 10px;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 10px; */
   cursor: pointer;
-  padding : 10px;
+  /* padding : 10px; */
+  overflow: hidden;
+  transition: 0.5s;
+  transform: translateY(-50px);
+  opacity: 0.80;
+  transform: rotateX(7deg) translateY(-6px) scale(1.05);
+
 }
 .custom-tooltip {
   --bs-tooltip-bg: var(--bs-primary);
@@ -81,31 +97,7 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 
   width : 100%;
   height : 89vh;
 }
-.questionHead{
-  width : 90%;
-  min-height: 30vh;
-  background-color: orange;
-  margin : auto;
-  padding : 30px;
-  border-radius: 20px;
-  margin : 20px
-}
-.questionBank{
-  width : 60%;
-  min-height : 40vh;
-  border : 2px solid black;
-  margin : 30px;
-  padding : 40px;
-}
-.optonsOfquestion{
-  width : 40%;
-  min-height: 10vh;
-  border : 1px solid green;
-  margin : 20px;
-  padding : 20px;
-  font-size: 30px;
-  text-align: left;
-}
+
 body {
   background-color: #e4e4e4;
   padding-bottom : 30px;
@@ -122,7 +114,8 @@ div {
 }
 
 .question {
-  background-color: #0094da;
+  /* background-color: #0094da; */
+  background-color: rgb(15,76,129);
   color: white;
   padding: 10px;
   min-height: 60px;
@@ -140,7 +133,8 @@ div {
 }
 
 .congratulations {
-  background-color: #0094da;
+  /* background-color: #0094da; */
+  background-color: rgb(15,76,129);
   padding: 20px;
   font-size: 36px;
   color: #fff;
@@ -155,7 +149,8 @@ div {
 .answer {
   width: 48%;
   background: #fff;
-  border: 2px solid #0094da;
+  /* border: 2px solid #0094da; */
+  border : 2px solid rgb(15,76,129);
   min-height: 70px;
   cursor: pointer;
   margin-bottom: 30px;
@@ -171,7 +166,8 @@ div {
 
 .answer-letter {
   font-size: 30px;
-  background-color: #0084da;
+  /* background-color: #0084da; */
+  background-color: rgb(15,76,129);
   color: #fff;
   width: 70px;
   display: flex;
@@ -229,6 +225,7 @@ div {
   text-transform: uppercase;
   cursor: pointer;
   text-align: center;
+  margin-top: 20px;
 }
 
 .score {
@@ -262,3 +259,6 @@ div {
   margin-bottom: 20px;
 
 }
+
+/* ///////////////////////////////// */
+

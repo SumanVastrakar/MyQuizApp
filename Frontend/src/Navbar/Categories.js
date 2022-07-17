@@ -3,10 +3,10 @@ import {Link} from 'react-router-dom'
 
 export default function Categories() {
   return (
-    <div className='containerCategories'>
+    <div className='containerCategories container'>
       <h1  className = "headingCategories" style={{textAlign:"center", margin:"30px"}}>CATEGORIES</h1>
       <div>
-        <div className ="container">
+        <div className ="container" style={{marginLeft :"-5%"}}>
         <div className='d-flex' >
           <Link style={{textDecoration : "none"}}  to="/javascript">
         <div className="card col card1" style={{width: "18rem", margin :"30px", backgroundColor:"red"}}>
