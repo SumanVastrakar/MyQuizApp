@@ -578,6 +578,126 @@
     },
     {
       "category": "Redux",
+      "ques": "Redux solves this problem by managing application’s state with a single global object called ?" ,
+      "a": "directory",
+      "b": "file",
+      "c": "store",
+      "d": "None of the above",
+      "answer": "C",
+      "details": "Redux solves this problem by managing application’s state with a single global object called Store.",
+      "points": 10,
+      "id": 49
+    },
+    {
+      "category": "Redux",
+      "ques": "What is true about redux?" ,
+      "a": "Redux is a predictable state container for JavaScript apps.",
+      "b": "Redux fundamental principles help in maintaining consistency throughout your application",
+      "c": "Redux makes debugging and testing easier",
+      "d": "All of the above",
+      "answer": "D",
+      "details": "All of the above statement are true.",
+      "points": 10,
+      "id": 50
+    },
+    {
+      "category": "Redux",
+      "ques": "Actions and states are held together by a function called?" ,
+      "a": "Reducer",
+      "b": "Redux",
+      "c": "suscribe",
+      "d": "view",
+      "answer": "A",
+      "details": "Actions and states are held together by a function called Reducer. An action is dispatched with an intention to cause change. This change is performed by the reducer.",
+      "points": 10,
+      "id": 51
+    },
+    {
+      "category": "Redux",
+      "ques": "The ____________ can retrieve updated state and re-render again." ,
+      "a": "state",
+      "b": "store",
+      "c": "view",
+      "d": "action",
+      "answer": "C",
+      "details": "The view can retrieve updated state and re-render again.",
+      "points": 10,
+      "id": 52
+    },
+    {
+      "category": "Redux",
+      "ques": "A store is an ___________ object tree in Redux. " ,
+      "a": "immutable",
+      "b": "mutable",
+      "c": "Both A and B",
+      "d": "None of the above",
+      "answer": "A",
+      "details": "A store is an immutable object tree in Redux.",
+      "points": 10,
+      "id": 53
+    },
+    {
+      "category": "Redux",
+      "ques": " A createStore function can have _________ arguments" ,
+      "a": "1",
+      "b": "2",
+      "c": "3",
+      "d": "4",
+      "answer": "C",
+      "details": ":A createStore function can have three arguments. The following is the syntax : createStore(reducer, [preloadedState], [enhancer])",
+      "points": 10,
+      "id": 54
+    },
+    {
+      "category": "Redux",
+      "ques": "Which of the following is react-Redux helper method" ,
+      "a": "help()",
+      "b": "assist()",
+      "c": "view()",
+      "d": "connect()",
+      "answer": "D",
+      "details": "You can dispatch an action by directly using store.dispatch(). However, it is more likely that you access it with react-Redux helper method called connect(). You can also use bindActionCreators() method to bind many action creators with dispatch function.",
+      "points": 10,
+      "id": 55
+    },
+    {
+      "category": "Redux",
+      "ques": "Reducers are a pure function in Redux." ,
+      "a": "True",
+      "b": "False",
+      "c": "Can be true or false",
+      "d": "Can not say",
+      "answer": "A",
+      "details": "True, Reducers are a pure function in Redux.",
+      "points": 10,
+      "id": 56
+    },
+    {
+      "category": "Redux",
+      "ques": "Which of them provide us debugging platform for Redux apps?" ,
+      "a": "Redux-Testing",
+      "b": "Redux-Middleware",
+      "c": "Redux-Devtools",
+      "d": "Redux-suscriber",
+      "answer": "C",
+      "details": "Redux-Devtools provide us debugging platform for Redux apps. It allows us to perform time-travel debugging and live editing.",
+      "points": 10,
+      "id": 57
+    },
+    {
+      "category": "Redux",
+      "ques": "Which of the following makes stores available?" ,
+      "a": "COMPONENT",
+      "b": "CONTAINER",
+      "c": "ACTIONS",
+      "d": "PROVIDER",
+      "answer": "D",
+      "details": "PROVIDER : Makes stores available",
+      "points": 10,
+      "id": 58
+    },
+    {
+      "category": "Redux",
       "ques": "" ,
       "a": "",
       "b": "",
@@ -586,8 +706,21 @@
       "answer": "",
       "details": " ",
       "points": 10,
-      "id": 48
+      "id": 59
     },
+    {
+      "category": "Redux",
+      "ques": "" ,
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": "",
+      "answer": "",
+      "details": " ",
+      "points": 10,
+      "id": 60
+    },
+    
 
   ]
 }
