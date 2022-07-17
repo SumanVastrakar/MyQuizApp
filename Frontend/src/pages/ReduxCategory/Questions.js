@@ -3,7 +3,7 @@ import React from 'react'
 export default function Questions() {
 
     const[data, setData] = useState([]);
-    const currentIndex = useSelector(store => store.htmlCurrentques.currentQuestion)
+    const currentIndex = useSelector(store => store.reduxCurrentQues.currentQuestion)
     console.log("currentIndex" , currentIndex)
 
     useEffect(() => {
@@ -17,7 +17,7 @@ export default function Questions() {
 const jsArray = [];
 // if( data.length !)
 for( let i = 0; i < data.length; i++){
-    if( data[i].category === "HTML"){
+    if( data[i].category === "Redux"){
         jsArray.push(data[i])
     }
 }

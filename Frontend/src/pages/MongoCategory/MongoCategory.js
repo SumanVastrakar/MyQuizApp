@@ -1,15 +1,15 @@
 import React from 'react'
 import {useState, useEffect} from "react"
 import { useSelector, useDispatch } from 'react-redux';
-import { arrayLength, quesNum, restart, shuffleAnswer } from '../../Redux/JavascriptPage/action';
+import { arrayLength, quesNum, restart, shuffleAnswer } from '../../Redux/MongoPage/action';
 import CircleLoader from './Answers';
-import { colorA, colorB, colorC, colorD, flag } from '../../Redux/JavascriptPage/action';
+import { colorA, colorB, colorC, colorD, flag } from '../../Redux/MongoPage/action';
 import HashLoader from "react-spinners/HashLoader"
 import CategoryLoading from '../LoadingPage/CategoryLoading';
 import QuestionLoading from '../LoadingPage/QuestionLoading';
 
 
-export default function JavascriptCategory() {
+export default function MongoCategory() {
   const [loading, setLoading] = useState(false);
   const [quesLoading, setQuesLoding] = useState(false);
 
@@ -22,14 +22,14 @@ setLoading(false);
 
   },[])
     const[data, setData] = useState([]);
-    const currentIndex = useSelector(store => store.jsCurrentques.currentQuestion)
-    const showResults = useSelector(store => store.jsCurrentques.showResults)
-    const correctAnswerCount = useSelector(store => store.jsCurrentques.correctAnswerCount)
-    const A = useSelector(store => store.jsCurrentques.colorA);
-    const B = useSelector(store => store.jsCurrentques.colorB);
-    const C = useSelector(store => store.jsCurrentques.colorC);
-    const D = useSelector(store => store.jsCurrentques.colorD);
-    const F = useSelector(store => store.jsCurrentques.flag);
+    const currentIndex = useSelector(store => store.mongoCurrentQues.currentQuestion)
+    const showResults = useSelector(store => store.mongoCurrentQues.showResults)
+    const correctAnswerCount = useSelector(store => store.mongoCurrentQues.correctAnswerCount)
+    const A = useSelector(store => store.mongoCurrentQues.colorA);
+    const B = useSelector(store => store.mongoCurrentQues.colorB);
+    const C = useSelector(store => store.mongoCurrentQues.colorC);
+    const D = useSelector(store => store.mongoCurrentQues.colorD);
+    const F = useSelector(store => store.mongoCurrentQues.flag);
     
     console.log("currentIndex" , currentIndex)
     const dispatch = useDispatch();
@@ -46,7 +46,7 @@ setLoading(false);
 // if( data.length !)
 let questions = [];
 for( let i = 0; i < data.length; i++){
-    if( data[i].category === "javascript"){
+    if( data[i].category === "mongodb"){
         questions.push(data[i])
     }
 }
@@ -83,7 +83,7 @@ console.log(ans)
             <div className='results'>
             <div className='congratulations'>Congratulations!!</div>
             <div className='results-info'>
-              <div>You have completed Javascript Quiz.</div>
+              <div>You have completed Mongo Quiz.</div>
               <div>
                 You've got {correctAnswerCount} of {" "} {questions.length}
               </div>

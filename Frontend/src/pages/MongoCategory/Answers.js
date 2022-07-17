@@ -1,16 +1,16 @@
 import React,{useState} from 'react'
 import {useSelector, useDispatch} from "react-redux";
-import { colorA,colorB, colorC, colorD, countNumber, flag } from '../../Redux/HTMLPage/action';
+import { colorA,colorB, colorC, colorD, countNumber, flag } from '../../Redux/JavascriptPage/action';
 
 export default function Answers({questions, currentIndex, ans, details}) {
     const dispatch = useDispatch()
     const letter = ["A", "B", "C", "D"];
-    const A = useSelector(store => store.jsCurrentques.colorA);
-    const B = useSelector(store => store.jsCurrentques.colorB);
-    const C = useSelector(store => store.jsCurrentques.colorC);
-    const D = useSelector(store => store.jsCurrentques.colorD);
-    const F = useSelector(store => store.jsCurrentques.flag);
-    const correctAnswerCount = useSelector(store => store.htmlCurrentques.correctAnswerCount)
+    const A = useSelector(store => store.mongoCurrentQues.colorA);
+    const B = useSelector(store => store.mongoCurrentQues.colorB);
+    const C = useSelector(store => store.mongoCurrentQues.colorC);
+    const D = useSelector(store => store.mongoCurrentQues.colorD);
+    const F = useSelector(store => store.mongoCurrentQues.flag);
+    const correctAnswerCount = useSelector(store => store.mongoCurrentQues.correctAnswerCount)
 
 
   return (

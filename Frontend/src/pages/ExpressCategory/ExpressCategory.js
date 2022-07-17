@@ -1,15 +1,15 @@
 import React from 'react'
 import {useState, useEffect} from "react"
 import { useSelector, useDispatch } from 'react-redux';
-import { arrayLength, quesNum, restart, shuffleAnswer } from '../../Redux/JavascriptPage/action';
+import { arrayLength, quesNum, restart, shuffleAnswer } from '../../Redux/expressPage/action';
 import CircleLoader from './Answers';
-import { colorA, colorB, colorC, colorD, flag } from '../../Redux/JavascriptPage/action';
+import { colorA, colorB, colorC, colorD, flag } from '../../Redux/expressPage/action';
 import HashLoader from "react-spinners/HashLoader"
 import CategoryLoading from '../LoadingPage/CategoryLoading';
 import QuestionLoading from '../LoadingPage/QuestionLoading';
 
 
-export default function JavascriptCategory() {
+export default function ExpressCategory() {
   const [loading, setLoading] = useState(false);
   const [quesLoading, setQuesLoding] = useState(false);
 
@@ -22,14 +22,14 @@ setLoading(false);
 
   },[])
     const[data, setData] = useState([]);
-    const currentIndex = useSelector(store => store.jsCurrentques.currentQuestion)
-    const showResults = useSelector(store => store.jsCurrentques.showResults)
-    const correctAnswerCount = useSelector(store => store.jsCurrentques.correctAnswerCount)
-    const A = useSelector(store => store.jsCurrentques.colorA);
-    const B = useSelector(store => store.jsCurrentques.colorB);
-    const C = useSelector(store => store.jsCurrentques.colorC);
-    const D = useSelector(store => store.jsCurrentques.colorD);
-    const F = useSelector(store => store.jsCurrentques.flag);
+    const currentIndex = useSelector(store => store.expressCurrentques.currentQuestion)
+    const showResults = useSelector(store => store.expressCurrentques.showResults)
+    const correctAnswerCount = useSelector(store => store.expressCurrentques.correctAnswerCount)
+    const A = useSelector(store => store.expressCurrentques.colorA);
+    const B = useSelector(store => store.expressCurrentques.colorB);
+    const C = useSelector(store => store.expressCurrentques.colorC);
+    const D = useSelector(store => store.expressCurrentques.colorD);
+    const F = useSelector(store => store.expressCurrentques.flag);
     
     console.log("currentIndex" , currentIndex)
     const dispatch = useDispatch();
@@ -46,7 +46,7 @@ setLoading(false);
 // if( data.length !)
 let questions = [];
 for( let i = 0; i < data.length; i++){
-    if( data[i].category === "javascript"){
+    if( data[i].category === "express"){
         questions.push(data[i])
     }
 }
@@ -55,20 +55,7 @@ console.log(questions)
 let ans = questions[currentIndex]?.answer;
 console.log(ans)
 
-// replace(/\r\n|\n|\r/gm,'<br/>')
 
-// for( let i = 0; i < questions.length; i++){
-//   questions[i]["ques"] = questions[i]["ques"].replaceAll(";",";\n")
-// }
-// console.log(questions)
-// let questionArray;
-//  questionArray = questions[currentIndex]?.ques.split(";").map((elem) => elem += ";")
-
-// console.log("questionArray",questionArray)
-
-// useEffect(() => {
-// dispatch(shuffleAnswer(questions))
-//   },[data])
 
   return (
     <div className="quiz">
@@ -83,7 +70,7 @@ console.log(ans)
             <div className='results'>
             <div className='congratulations'>Congratulations!!</div>
             <div className='results-info'>
-              <div>You have completed Javascript Quiz.</div>
+              <div>You have completed Express Quiz.</div>
               <div>
                 You've got {correctAnswerCount} of {" "} {questions.length}
               </div>

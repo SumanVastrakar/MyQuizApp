@@ -78,7 +78,7 @@ card :before{
   transition: 0.5s;
   transform: translateY(-50px);
   opacity: 0.80;
-  transform: rotateX(10deg) translateY(-10px) scale(1.19);
+  transform: rotateX(10deg) translateY(-10px) scale(1.11);
 
 }
 .custom-tooltip {
@@ -226,6 +226,21 @@ div {
   cursor: pointer;
   text-align: center;
   margin-top: 20px;
+}
+.restartButton{
+  margin: 0 auto;
+  color: #fff;
+  background: #c3164a;
+  width: 200px;
+  font-size: 18px;
+  font-weight: 600;
+  /* padding: 14px 75px; */
+  text-transform: uppercase;
+  border-radius : 50%;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 20px;
+  padding : 20px;
 }
 
 .score {
