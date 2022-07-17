@@ -13,7 +13,7 @@ export default function QuestionLoading() {
   <div class="bar bar6"></div>
   <div class="bar bar7"></div>
   <div class="bar bar8"></div>
-  <div style={{margin :"auto"}}>Loading next question....</div>
+  
 </div>
   )
 }

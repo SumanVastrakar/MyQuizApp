@@ -6,7 +6,7 @@ export default function CategoryLoading() {
     <div class="ring">Loading
     <span className='ringSpan'></span>
 
-    <h5>Once move ahead you cant go back so be carefull All the best for Quiz!!</h5>
+
   </div>
   )
 }
