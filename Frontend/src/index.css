@@ -64,11 +64,11 @@ card :before{
   position: absolute;
   top: 0;
   left: 0;
-    box-shadow: 0 6px 12px 12px rgba($c_0, 0.4); 
+    /* box-shadow: 0 6px 12px 12px rgba($c_0, 0.4); 
  will-change: opacity;
   transform-origin: top center; 
    transform: skewX(.001deg);
-  transition: transform .35s ease-in-out, opacity .5s ease-in-out;
+  transition: transform .35s ease-in-out, opacity .5s ease-in-out; */
 }
 .card:hover{
   /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 10px; */
@@ -78,7 +78,7 @@ card :before{
   transition: 0.5s;
   transform: translateY(-50px);
   opacity: 0.80;
-  transform: rotateX(7deg) translateY(-6px) scale(1.05);
+  transform: rotateX(10deg) translateY(-10px) scale(1.19);
 
 }
 .custom-tooltip {
