@@ -88,31 +88,16 @@ console.log(ans)
    
         {
           quesLoading ? (
-            // <HashLoader color={"rgb(0,135,166)"} loading={loading}  size={150} />
-            // <CategoryLoading/>
+           
             <QuestionLoading/>
           )  : (
             <div>
                      <div className="question">
        {questions[currentIndex]?.ques}
-       {/* {
-        
-        questionArray?.map(elem => (
-         <div>
-  <p>{elem}</p>
-          <pre>
-
-          </pre>
-          
-         </div> 
-        
-        ))
-       } */}
+  
        </div>
        <div className='answers'>
         <CircleLoader  questions={questions} currentIndex={currentIndex} ans = {ans} details = {questions.details}/>
-    
-    
         </div>
        <div className='next-button' onClick={(() => {
         dispatch(quesNum(1)) 

@@ -9,6 +9,9 @@ import { mongoReducers } from "./MongoPage/reducer";
 import { nodeReducers } from "./NodePage/reducers";
 import { reactReducers } from "./ReactPage/reducers";
 import { reduxReducers } from "./ReduxPage/reducer";
+import { registerReducer } from "./Register/register";
+import { loginReducer } from "./Login/reducer";
+
 
 
 const rootReducers = combineReducers({
@@ -20,7 +23,9 @@ const rootReducers = combineReducers({
     mongoCurrentQues : mongoReducers,
     nodeCurrentQues : nodeReducers,
     reactcurrentQues : reactReducers,
-    reduxCurrentQues : reduxReducers
+    reduxCurrentQues : reduxReducers,
+    userRegister: registerReducer,
+    userLogin: loginReducer,
 })
 
 export const store = createStore(
