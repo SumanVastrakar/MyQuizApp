@@ -5,6 +5,7 @@ import axios from "axios"
 export const POST_QUES_REQUEST = "POST_QUES_REQUEST";
 export const POST_QUES_SUCCESS = "POST_QUES_SUCCESS";
 export const POST_QUES_FAILURE = "POST_QUES_FAILURE";
+export const USER_NAME = "USER_NAME";
 
 
 //action types 
@@ -27,9 +28,16 @@ export const quesFailure = () => {
         
     }
 }
+export const userName = (data) =>{
+    return {
+     type : USER_NAME,
+      payload : data,
+    }
+}
 
 export const postQuestion = (quest) => (dispatch) => {
     quesRequest();
     axios.post("http://localhost:8080/quiz", quest).then(d => dispatch(quesSuccess(d.data)))
     .catch(error => quesFailure(error.data))
 }
+

@@ -2,13 +2,14 @@ import React from 'react'
 import {Routes, Route} from "react-router-dom"
 import AdminControl from '../AdminLogin/AdminControl'
 import HomeSlideshow from '../Navbar/HomeSlideshow'
+import AdminLogin from '../pages/Authentication/AdminLogin'
 import Login from '../pages/Authentication/Login'
+import Register from '../pages/Authentication/Register'
 import CSSCategory from '../pages/CSSCategory/CSSCategory'
 import ExpressCategory from '../pages/ExpressCategory/ExpressCategory'
 import HTMLCategory from '../pages/HTMLCategory/HTMLCategory'
 import JavascriptCategory from '../pages/JavascriptCategory/JavascriptCategory'
 import CategoryLoading from '../pages/LoadingPage/CategoryLoading'
-import LoginAndLogoutPage from '../pages/LoginAndLogout/LoginAndLogoutPage'
 import MongoCategory from '../pages/MongoCategory/MongoCategory'
 import NodeCategory from '../pages/NodeCategory/NodeCategory'
 import ReactCategory from '../pages/ReactCategory/ReactCategory'
@@ -22,8 +23,10 @@ export default function AllRoutes() {
     <div>
        <Routes>
         <Route path="/" element={<HomeSlideshow/>}></Route>
-    <Route path="/adminlogin" element={<AdminControl/>}></Route>
+    <Route path="/adminpage" element={<AdminControl/>}></Route>
+    <Route path="/adminlogin" element={<AdminLogin/>}></Route>
     <Route path="/userlogin" element={<Login/>}></Route>
+    <Route path="/usersignin" element={<Register/>}></Route>
     <Route path="/javascript" element={<JavascriptCategory/>}></Route>
     <Route path="/loading" element={<CategoryLoading/>}></Route>
  <Route path="/css" element={<CSSCategory/>}></Route>
