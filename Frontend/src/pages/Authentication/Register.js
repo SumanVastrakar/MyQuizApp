@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 
 import { useNavigate } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
-import { register } from '../../Redux/Register/action'
+// import { register } from '../../Redux/Register/action'
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { AiOutlineUser, AiOutlineMail, AiFillLock } from "react-icons/ai";
 import { Link } from "react-router-dom"

@@ -4,7 +4,9 @@ import AdminControl from '../AdminLogin/AdminControl'
 import HomeSlideshow from '../Navbar/HomeSlideshow'
 import AdminLogin from '../pages/Authentication/AdminLogin'
 import Login from '../pages/Authentication/Login'
+import LoginOne from '../pages/Authentication/LoginOne'
 import Register from '../pages/Authentication/Register'
+import RegisterOne from '../pages/Authentication/RegisterOne'
 import CSSCategory from '../pages/CSSCategory/CSSCategory'
 import ExpressCategory from '../pages/ExpressCategory/ExpressCategory'
 import HTMLCategory from '../pages/HTMLCategory/HTMLCategory'
@@ -25,8 +27,8 @@ export default function AllRoutes() {
         <Route path="/" element={<HomeSlideshow/>}></Route>
     <Route path="/adminpage" element={<AdminControl/>}></Route>
     <Route path="/adminlogin" element={<AdminLogin/>}></Route>
-    <Route path="/userlogin" element={<Login/>}></Route>
-    <Route path="/usersignin" element={<Register/>}></Route>
+    <Route path="/userlogin" element={<LoginOne/>}></Route>
+    <Route path="/usersignin" element={<RegisterOne/>}></Route>
     <Route path="/javascript" element={<JavascriptCategory/>}></Route>
     <Route path="/loading" element={<CategoryLoading/>}></Route>
  <Route path="/css" element={<CSSCategory/>}></Route>

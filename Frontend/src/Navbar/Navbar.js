@@ -28,7 +28,7 @@ export default function Navbar() {
       </ul>
      <div style={{display : "flex"}}>
      <Link style={{textDecoration : "none"}} to="/userlogin">
-        <div style={{ textAlign: "center", margin : "auto", marginRight: "40px", marginTop:"10px"}}>
+     <div style={{ textAlign: "center", margin : "auto", marginRight: "40px", marginTop:"10px"}}>
         <FaUserCircle style={{fontSize:"50px", color:"white"}} 
        data-bs-toggle="tooltip" data-bs-placement="top"
        data-bs-custom-className="custom-tooltip"

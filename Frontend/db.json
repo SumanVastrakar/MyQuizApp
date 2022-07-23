@@ -1092,6 +1092,18 @@
       "details": "A is the correct answer. To use Mongo with Express, we need a client API for the node.",
       "points": 10,
       "id": 91
+    },  
+    {
+      "category": "CSS",
+      "ques": "Which of the following property defines the style for the bottom border of an element?" ,
+      "a": "border-bottom-style",
+      "b": "border-collapse",
+      "c": "border-style-bottom",
+      "d": "none of the mentioned",
+      "answer": "A",
+      "details": "A is the correct answer. Self-explainatory.",
+      "points": 10,
+      "id": 92
     }
     
 

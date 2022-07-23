@@ -236,7 +236,8 @@ div {
   font-weight: 600;
   /* padding: 14px 75px; */
   text-transform: uppercase;
-  border-radius : 50%;
+  border-radius : 5%;
+  margin-bottom: 50px;
   cursor: pointer;
   text-align: center;
   margin-top: 20px;
@@ -275,5 +276,12 @@ div {
 
 }
 
-/* ///////////////////////////////// */
+.loginFormStyle{
+  width : 40%;
+  background-color: whitesmoke;
+ margin-top : 6%;
+ padding : 2%;
+ box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
 

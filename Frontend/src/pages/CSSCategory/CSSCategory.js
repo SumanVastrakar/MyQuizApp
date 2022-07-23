@@ -12,6 +12,11 @@ import QuestionLoading from '../LoadingPage/QuestionLoading';
 export default function CSSCategory() {
   const [loading, setLoading] = useState(false);
   const [quesLoading, setQuesLoding] = useState(false);
+  const [newQues, setnewQues] = useState([]);
+  const [questions, setQuestions] = useState([]);
+  const [obj, setObj] = useState({});
+
+
 
   useEffect(() => {
 setLoading(true)
@@ -40,17 +45,56 @@ setLoading(false);
     const getData = async() =>{
         fetch("http://localhost:8080/quiz").then((d) => d.json()).then((data) =>{
             setData(data);
+          
         })
     }
+   
 
 // if( data.length !)
-let questions = [];
-for( let i = 0; i < data.length; i++){
-    if( data[i].category === "CSS"){
-        questions.push(data[i])
+
+
+ 
+
+
+// useEffect(() =>{
+  if(currentIndex === 0){
+    console.log("i am running")
+   
+  
+    for( let i = 0; i < data.length; i++){
+      if( data[i].category === "CSS"){
+        // newQues.push(data[i])
+        setnewQues([...newQues,data[i]])
+      }
+      // if( i === data.length -1 ){
+      // setFlag(true)
+      // }
+  }
+  console.log("newQues", newQues)
+  
+  console.log("length",newQues.length)
+    for( let i = 0; i < 10; i++ ){
+      let random = Math.floor(Math.random() * (newQues.length - 0) + 0);
+      console.log(random)
+      if( !(random in obj)){
+        if(newQues.length !== 0){
+          setQuestions([...questions,newQues[random]])
+          // setObj({...obj, random : 1})
+        }
+     
+        // questions.push(newQues[random])
+      }else {
+        i--
+      }
+     
+       
     }
-}
-console.log(questions)
+  }
+// }, [data])
+
+
+
+console.log("questions",questions)
 
 let ans = questions[currentIndex]?.answer;
 console.log(ans)
@@ -112,7 +156,7 @@ console.log(ans)
           setQuesLoding(false)
           }, 1000)
        })}> Next Question </div>
-         <div className='restartButton' onClick={() => dispatch(restart())}>Restart</div>
+
        {
          F === "disabled-answer" ? (<div className='detailsDiv'>
          <details>
@@ -123,15 +167,16 @@ console.log(ans)
          </div>) : ("")
        }
     
+    <div className='restartButton' onClick={() => dispatch(restart())}>Restart</div>
     
               </div>
           )
         }
      
-    
-    
+  
             </div>
           )}
+                   
       
           </div>
          )
@@ -147,4 +192,4 @@ console.log(ans)
     </div>
   )
 }
-export const questions = [];
+// export const questions = [];

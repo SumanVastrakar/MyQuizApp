@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import {useNavigate} from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
-import { loginSuccess } from '../../Redux/Login/action'
+// import { loginSuccess } from '../../Redux/Login/action'
 import {Link} from "react-router-dom"
 import toastr from 'toastr'
 import { AiOutlineUser, AiOutlineMail, AiFillLock} from "react-icons/ai";
@@ -44,7 +44,7 @@ export default function Login() {
             console.log(data)
             if(data.token != null) {
 
-                dispatch(loginSuccess(form.username, data.token))
+                // dispatch(loginSuccess(form.username, data.token))
                 toast.success('Successfully Logged In!', {
                     position: "top-center",
                     autoClose: 5000,
