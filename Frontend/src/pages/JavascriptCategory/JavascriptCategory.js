@@ -22,6 +22,7 @@ setLoading(false);
 
   },[])
     const[data, setData] = useState([]);
+    const [questions, setQuestions] = useState([])
     const currentIndex = useSelector(store => store.jsCurrentques.currentQuestion)
     const showResults = useSelector(store => store.jsCurrentques.showResults)
     const correctAnswerCount = useSelector(store => store.jsCurrentques.correctAnswerCount)
@@ -38,43 +39,47 @@ setLoading(false);
         getData();
     },[])
     const getData = async() =>{
-        fetch("http://localhost:8080/quiz").then((d) => d.json()).then((data) =>{
-            setData(data);
-        })
-    }
+      let arr = await fetch("http://localhost:8080/quiz");
+      arr = await arr.json();
+      setData(await shuffleArray(await filteringData(arr)));
+      // console.log(arr)
+  }
 
-// if( data.length !)
-let questions = [];
-for( let i = 0; i < data.length; i++){
-    if( data[i].category === "javascript"){
-        questions.push(data[i])
+  const filteringData = async(array) => {
+    let newArr = []
+    for( let i = 0; i < array.length; i++){
+      if( array[i].category === "javascript"){
+        newArr.push(array[i]);
+        
+      }
+      
+    
+  }
+
+  return newArr;
+
+  }
+
+async function shuffleArray(array) {
+  console.log("shuffle Array", array)
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
     }
+    setQuestions(array.slice(0,10))
+    
 }
-console.log(questions)
 
 let ans = questions[currentIndex]?.answer;
 console.log(ans)
 
-// replace(/\r\n|\n|\r/gm,'<br/>')
 
-// for( let i = 0; i < questions.length; i++){
-//   questions[i]["ques"] = questions[i]["ques"].replaceAll(";",";\n")
-// }
-// console.log(questions)
-// let questionArray;
-//  questionArray = questions[currentIndex]?.ques.split(";").map((elem) => elem += ";")
-
-// console.log("questionArray",questionArray)
-
-// useEffect(() => {
-// dispatch(shuffleAnswer(questions))
-//   },[data])
 
   return (
     <div className="quiz">
       {
         loading ? (
-          // <ClipLoader color={"#123abc"} loading={loading} size={150} />
+          
           <CategoryLoading/>
           )
            : (     
@@ -101,26 +106,13 @@ console.log(ans)
    
         {
           quesLoading ? (
-            // <HashLoader color={"rgb(0,135,166)"} loading={loading}  size={150} />
-            // <CategoryLoading/>
+        
             <QuestionLoading/>
           )  : (
             <div>
                      <div className="question">
        {questions[currentIndex]?.ques}
-       {/* {
-        
-        questionArray?.map(elem => (
-         <div>
-  <p>{elem}</p>
-          <pre>
-
-          </pre>
-          
-         </div> 
-        
-        ))
-       } */}
+      
        </div>
        <div className='answers'>
         <CircleLoader  questions={questions} currentIndex={currentIndex} ans = {ans} details = {questions.details}/>
@@ -140,7 +132,7 @@ console.log(ans)
           setQuesLoding(false)
           }, 1000)
        })}> Next Question </div>
-         <div className='restartButton' onClick={() => dispatch(restart())}>Restart</div>
+        
        {
          F === "disabled-answer" ? (<div className='detailsDiv'>
          <details>
@@ -150,6 +142,7 @@ console.log(ans)
          </details>
          </div>) : ("")
        }
+        <div className='restartButton' onClick={() => dispatch(restart())}>Restart</div>
     
     
               </div>

@@ -8,7 +8,9 @@ import LoginOne from '../pages/Authentication/LoginOne'
 import Register from '../pages/Authentication/Register'
 import RegisterOne from '../pages/Authentication/RegisterOne'
 import CSSCategory from '../pages/CSSCategory/CSSCategory'
+import { ErrorRoute } from '../pages/Error/ErrorRoute'
 import ExpressCategory from '../pages/ExpressCategory/ExpressCategory'
+import { Footer } from '../pages/Footer/Footer'
 import HTMLCategory from '../pages/HTMLCategory/HTMLCategory'
 import JavascriptCategory from '../pages/JavascriptCategory/JavascriptCategory'
 import CategoryLoading from '../pages/LoadingPage/CategoryLoading'
@@ -38,6 +40,8 @@ export default function AllRoutes() {
   <Route path="/node" element={<NodeCategory></NodeCategory>}></Route>
 <Route path="/react" element={<ReactCategory/>}></Route>
     <Route path="/redux" element={<ReduxCategory/>}></Route>
+    <Route path="*" element={<ErrorRoute/>}></Route>
+    <Route path="/footer" element={<Footer/>}></Route>
    </Routes>
     </div>
   )

@@ -184,18 +184,18 @@ div {
 
 .correct-answer {
   font-size: 30px;
-  background-color:#1ea55b;
+  background-color:#1ea55b !important;
   color: #fff;
   width: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #1ea55b ;
+  border: 2px solid #1ea55b !important;
 }
 
 .correct-answer .answer-letter {
   background: #1ea55b;
-  border: 2px solid #1ea55b ;
+  border: 2px solid #1ea55b !important;
 }
 
 .wrong-answer {

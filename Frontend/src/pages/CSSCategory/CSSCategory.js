@@ -39,65 +39,48 @@ setLoading(false);
     console.log("currentIndex" , currentIndex)
     const dispatch = useDispatch();
 
-    useEffect(() => {
-        getData();
+    useEffect( () => {
+         getData();
+        
     },[])
     const getData = async() =>{
-        fetch("http://localhost:8080/quiz").then((d) => d.json()).then((data) =>{
-            setData(data);
+        let arr = await fetch("http://localhost:8080/quiz");
+        arr = await arr.json();
+        setData(await shuffleArray(await filteringData(arr)));
+        // console.log(arr)
+    }
+
+    const filteringData = async(array) => {
+      let newArr = []
+      for( let i = 0; i < array.length; i++){
+        if( array[i].category === "CSS"){
+          newArr.push(array[i]);
           
-        })
-    }
-   
-
-// if( data.length !)
-
-
- 
-
-
-// useEffect(() =>{
-  if(currentIndex === 0){
-    console.log("i am running")
-   
-  
-    for( let i = 0; i < data.length; i++){
-      if( data[i].category === "CSS"){
-        // newQues.push(data[i])
-        setnewQues([...newQues,data[i]])
-      }
-      // if( i === data.length -1 ){
-      // setFlag(true)
-      // }
-  }
-  console.log("newQues", newQues)
-  
-  console.log("length",newQues.length)
-    for( let i = 0; i < 10; i++ ){
-      let random = Math.floor(Math.random() * (newQues.length - 0) + 0);
-      console.log(random)
-      if( !(random in obj)){
-        if(newQues.length !== 0){
-          setQuestions([...questions,newQues[random]])
-          // setObj({...obj, random : 1})
         }
-     
-        // questions.push(newQues[random])
-      }else {
-        i--
-      }
-     
-       
+        
+      
     }
+
+    return newArr;
+  
+    }
+
+  async function shuffleArray(array) {
+    console.log("shuffle Array", array)
+      for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+      }
+      setQuestions(array.slice(0,10))
+      
   }
-// }, [data])
+ 
+// console.log("questions", questions)
 
 
-
-console.log("questions",questions)
 
 let ans = questions[currentIndex]?.answer;
-console.log(ans)
+// console.log(ans)
 
 
 

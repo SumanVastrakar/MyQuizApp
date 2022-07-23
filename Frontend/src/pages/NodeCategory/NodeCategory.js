@@ -22,6 +22,7 @@ setLoading(false);
 
   },[])
     const[data, setData] = useState([]);
+    const[questions,setQuestions] = useState([])
     const currentIndex = useSelector(store => store.nodeCurrentQues.currentQuestion)
     const showResults = useSelector(store => store.nodeCurrentQues.showResults)
     const correctAnswerCount = useSelector(store => store.nodeCurrentQues.correctAnswerCount)
@@ -38,37 +39,39 @@ setLoading(false);
         getData();
     },[])
     const getData = async() =>{
-        fetch("http://localhost:8080/quiz").then((d) => d.json()).then((data) =>{
-            setData(data);
-        })
-    }
+      let arr = await fetch("http://localhost:8080/quiz");
+      arr = await arr.json();
+      setData(await shuffleArray(await filteringData(arr)));
+      // console.log(arr)
+  }
 
-// if( data.length !)
-let questions = [];
-for( let i = 0; i < data.length; i++){
-    if( data[i].category === "nodejs"){
-        questions.push(data[i])
+  const filteringData = async(array) => {
+    let newArr = []
+    for( let i = 0; i < array.length; i++){
+      if( array[i].category === "nodejs"){
+        newArr.push(array[i]);
+        
+      }
+      
+    
+  }
+
+  return newArr;
+
+  }
+
+async function shuffleArray(array) {
+  console.log("shuffle Array", array)
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
     }
+    setQuestions(array.slice(0,10))
+    
 }
-console.log(questions)
-
 let ans = questions[currentIndex]?.answer;
 console.log(ans)
 
-// replace(/\r\n|\n|\r/gm,'<br/>')
-
-// for( let i = 0; i < questions.length; i++){
-//   questions[i]["ques"] = questions[i]["ques"].replaceAll(";",";\n")
-// }
-// console.log(questions)
-// let questionArray;
-//  questionArray = questions[currentIndex]?.ques.split(";").map((elem) => elem += ";")
-
-// console.log("questionArray",questionArray)
-
-// useEffect(() => {
-// dispatch(shuffleAnswer(questions))
-//   },[data])
 
   return (
     <div className="quiz">
@@ -140,7 +143,7 @@ console.log(ans)
           setQuesLoding(false)
           }, 1000)
        })}> Next Question </div>
-         <div className='restartButton' onClick={() => dispatch(restart())}>Restart</div>
+        
        {
          F === "disabled-answer" ? (<div className='detailsDiv'>
          <details>
@@ -150,7 +153,7 @@ console.log(ans)
          </details>
          </div>) : ("")
        }
-    
+      <div className='restartButton' onClick={() => dispatch(restart())}>Restart</div>
     
               </div>
           )
