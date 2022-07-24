@@ -10,7 +10,7 @@ export default function Navbar() {
   useEffect(() =>{
     const user = JSON.parse(localStorage.getItem("profile"))
     setUserName(user)
-  },[userName])
+  },[])
 
   // console.log(user.result.name);
 
