@@ -39,7 +39,7 @@ setLoading(false);
         getData();
     },[])
     const getData = async() =>{
-      let arr = await fetch("http://localhost:8080/quiz");
+      let arr = await fetch("https://sumanquizapp.herokuapp.com/quiz");
       arr = await arr.json();
       setData(await shuffleArray(await filteringData(arr)));
       // console.log(arr)

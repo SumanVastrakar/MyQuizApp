@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AiOutlineUser, AiOutlineMail, AiFillLock} from "react-icons/ai";
+// https://suman-backendnodemyappquiz.herokuapp.com/
 
 
 
@@ -23,7 +24,7 @@ export default function AdminLogin() {
     const submitHandle = (e) => {
         e.preventDefault();
        console.log(form.email, form.password)
-        if(form.email == "suman_fw15@gmail.com" && form.password == "1234567890"){
+        if(form.email === "suman_fw15@gmail.com" && form.password === "1234567890"){
           
             toast.success('Admin Successfully Logged In!', {
                 position: "top-center",

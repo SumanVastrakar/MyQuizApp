@@ -117,7 +117,7 @@ const handleChange = (e)  =>{
             </div>
           </div>
           <div className="col-12">
-            <button className="btn btn-primary" type="submit">Submit form</button>
+            <button className="btn btn-primary" type="submit">Sign Up</button>
           </div>
         </form>
         <hr />

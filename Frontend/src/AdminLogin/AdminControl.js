@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { postQuestion } from '../Redux/AdminPage/action'
+import {EMAIL, PASSWORD} from "../"
+// require('dotenv').config();
 
 export default function AdminControl() {
   const dispatch = useDispatch()

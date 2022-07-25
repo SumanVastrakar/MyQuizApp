@@ -2,10 +2,12 @@
   /* background-color: rgba(60, 58, 58, 0.4); */
   color: white;
   background-color: black;
-  position: sticky;
+  /* position: fixed; */
+  width : 100%;
   top : 0px;
   z-index : 2;
 height :80px;
+box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 *{
   font-family: 'Bree Serif', serif;

@@ -1,7 +1,8 @@
-import { POST_QUES_FAILURE, POST_QUES_SUCCESS, POST_QUES_REQUEST } from "./action";
+import { POST_QUES_FAILURE, POST_QUES_SUCCESS, POST_QUES_REQUEST, LOGIN_STATUS } from "./action";
 
 const initState = {
     questions  : [],
+    loginStatus : false,
 }
 
 export const adminReducer = (state = initState,{type, payload}) => {
@@ -26,6 +27,12 @@ export const adminReducer = (state = initState,{type, payload}) => {
             ...state,
           error : true,
           loading : false,
+        }
+      }
+      case LOGIN_STATUS :{
+        return {
+          ...state, 
+          loginStatus : payload,
         }
       }
       default : return state;
