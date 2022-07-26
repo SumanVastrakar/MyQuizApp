@@ -24,7 +24,7 @@ export default function AdminLogin() {
     const submitHandle = (e) => {
         e.preventDefault();
        console.log(form.email, form.password)
-        if(form.email === "suman_fw15@gmail.com" && form.password === "1234567890"){
+        if(form.email === "suman_fw15_216@masai.school" && form.password === "1234567890"){
           
             toast.success('Admin Successfully Logged In!', {
                 position: "top-center",
