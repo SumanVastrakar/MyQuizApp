@@ -12,7 +12,7 @@ export const Footer = () => {
         <div className="footer__top_left">
           <h3>NEED HELP ?</h3>
           <ul>
-            <li>Chat with an Developer</li>
+            <li>Chat with an Developer(Suman Vastrakar)</li>
             <li>Text An Artist</li>
             <li>Call Us (877)-310-9222</li>
             {/* <li>Shipping & Returns</li> */}
