@@ -5,7 +5,7 @@ export const PrivateRoutes = ({ children }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const status = useSelector(store => store.adminLogin.loginStatus)
-    const isAuth = JSON.parse(localStorage.getItem("profile"))
+    const isAuth = JSON.parse(localStorage.getItem("profile")) || false
     console.log("loginStatus:", isAuth)
     if (isAuth !== null) {
 
@@ -14,7 +14,7 @@ export const PrivateRoutes = ({ children }) => {
         dispatch(loginStatus(false))
     }
     console.log("isAuth of private Route", isAuth)
-    if (!status) {
+    if (isAuth === false) {
         return <Navigate to="/userlogin" replace={true} />
     }
     else {

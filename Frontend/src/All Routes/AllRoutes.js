@@ -41,6 +41,7 @@ export default function AllRoutes() {
         <Route path="/redux" element={<PrivateRoutes><ReduxCategory /></PrivateRoutes>}></Route>
         <Route path="*" element={<ErrorRoute/>}></Route>
         <Route path="/footer" element={<Footer />}></Route>
+        <Route path="/foot" element={<PrivateRoutes/>}></Route>
 
         
       </Routes>
