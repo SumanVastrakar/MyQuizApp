@@ -17,6 +17,8 @@ Backend deployed to heroku and frontend to vercel
 
 Tech Stack Used: React | CSS | JavaScript | Bootstrap | MongoDB | ExpressJs | Nodejs
 
+Deployed Link ->  https://my-quiz-app-black.vercel.app/
+
 
 ![Screenshot (312)](https://user-images.githubusercontent.com/96719499/180910928-311f5cd3-42d6-4669-8fa5-a7f5d11f4576.png)
 ![Screenshot (313)](https://user-images.githubusercontent.com/96719499/180910947-227d6bf4-b9e2-4091-ae1e-a4043de0f2b5.png)
